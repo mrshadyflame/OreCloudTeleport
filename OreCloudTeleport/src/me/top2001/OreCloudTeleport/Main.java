@@ -34,7 +34,7 @@ public class Main extends JavaPlugin{
 		    }
 		    Player target = Bukkit.getServer().getPlayerExact(args[0]);
 		    if (target == null) {
-		    	player.sendMessage(prefix + ChatColor.GREEN + "The player, " + ChatColor.GREEN + args[0] + ChatColor.GREEN + " is currently not online.");
+		    	player.sendMessage(prefix + ChatColor.GREEN + "The player, " + ChatColor.DARK_GREEN + args[0] + ChatColor.GREEN + ", is currently not online.");
 		    	player.playNote(loc, Instrument.PIANO, new Note(1));
 		    	return true;
 		    }
