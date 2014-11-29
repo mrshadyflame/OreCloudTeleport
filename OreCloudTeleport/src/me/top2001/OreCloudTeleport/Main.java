@@ -27,16 +27,14 @@ public class Main extends JavaPlugin{
 			   if (args.length == 0) {
 				   player.sendMessage(prefix + ChatColor.GREEN + "Please specify a player. (/tp <Player> {TargetPlayer})");
 			   }else if (args.length == 1) {
+			   	try{
 				   Player targetPlayer = player.getServer().getPlayerExact(args[0]);
 				   Location targetPlayerLocation = targetPlayer.getLocation();
 				   player.teleport(targetPlayerLocation);
 				   player.sendMessage(prefix + ChatColor.GREEN + "Now teleporting...");
-			   }else if (args.length == 2) {
-				   Player targetPlayer = player.getServer().getPlayerExact(args[0]);
-				   Player targetPlayer1 = player.getServer().getPlayerExact(args[1]);
-				   Location targetPlayer1Location = targetPlayer1.getLocation();
-				   targetPlayer.teleport(targetPlayer1Location);
-				   player.sendMessage(prefix + ChatColor.GREEN + "Now teleporting...");
+			   	} catch (Exception e){
+			   		sender.sendMessage(ChatColor.RED + "Player not found!");
+			   	}
 			   }
 			   Player targetPlayer = Bukkit.getServer().getPlayerExact(args[0]);
 			   if (targetPlayer == null) {
