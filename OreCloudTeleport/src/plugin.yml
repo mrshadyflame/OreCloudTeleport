@@ -1,0 +1,12 @@
+name: OreCloudTeleport
+author: top2001
+version: 1.0
+description: Teleports the player places.
+main: me.top2001.OreCloudTeleport.Main
+commands:
+  spawn:
+    description: Teleports you to the spawn.
+  tp:
+    description: Teleports you to another player.
+  setspawn:
+    description: Sets the spawn.
